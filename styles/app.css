@@ -1,0 +1,236 @@
+/* Font Of App */
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-Regular.ttf");
+}
+@font-face {
+    font-family: "Outfit Medium";
+    src: url("../fonts/Outfit/Outfit-Medium.ttf");
+}
+@font-face {
+    font-family: "Outfit Bold";
+    src: url("../fonts/Outfit/Outfit-Bold.ttf");
+}
+@font-face {
+    font-family: "Young Serif";
+    src: url("../fonts/Young-Serif/YoungSerif-Regular.ttf");
+}
+
+/* Variables */
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+/* Basic Preparation */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+/* Container && Body */
+.container {
+    max-width: 1440px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+body {
+    font-family: "Outfit";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--Eggshell);
+    color: var(--Dark-Charcoal);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Title Component */
+.titles {
+    color: var(--Nutmeg);
+    font-size: 3.2rem;
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+/* hr default */
+hr {
+    margin-top: 4rem;
+    opacity: 25%;
+}
+
+/* Start Project */
+.main {
+    margin: 10rem;
+}
+.wrapper {
+    background-color: var(--White);
+    border-radius: 2rem;
+    padding: 5rem;
+}
+
+/* Banner Styles */
+.banner {
+    max-width: 70rem;
+}
+.banner__image {
+    border-radius: 2rem;
+    width: 100%;
+}
+.banner__title {
+    font-size: 4.8rem;
+    font-family: "Young Serif";
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.banner__description {
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+}
+
+/* Preparation Styles */
+.preparation {
+    background-color: var(--Rose-White);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+.preparation__title {
+    color: var(--Dark-Raspberry);
+    margin-left: 1.5rem;
+    font-size: 2rem;
+}
+.preparation__list {
+
+}
+.preparation__list-item {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem ;
+}
+.preparation__list-item:last-child {
+    margin-bottom: 0;
+}
+.preparation ul li::marker {
+    color: var(--Dark-Raspberry);
+}
+
+/* Ingredients Styles */
+.ingredients {
+
+}
+.ingredients__title {
+    color: var(--Nutmeg);
+    font-size: 3.2rem;
+}
+.ingredients__list {
+
+}
+.ingredients__list-item {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+.ingredients ul {
+    list-style-type: square;
+}
+.ingredients ul li::marker {
+    color: var(--Dark-Raspberry);
+}
+
+/* Instructions Styles */
+.instructions {
+
+}
+.instructions ol li::marker {
+    color: var(--Dark-Raspberry);
+    font-weight: bold;
+}
+.instructions__list {
+
+}
+.instruction__list-item {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    max-width: 62rem;
+}
+
+/* Nutrition Styles */
+.nutrition {
+
+}
+.nutrition__description {
+    margin-bottom: 3rem;
+    margin-top: -1rem;
+}
+.nutrition__table {
+    font-size: 1.1rem;
+    width: 100%;
+}
+.nutrition__table-border{
+    border-bottom: 1px solid #00000025;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.nutrition__table-border:last-child {
+    margin-bottom: 0;
+    border: none;
+}
+.nutrition__table-data,
+.nutrition__table-headings{
+    padding-left: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+.nutrition__table-headings{
+    position: absolute;
+    left: 50%;
+    color: var(--Nutmeg);
+}
+
+/* Project responsive */
+@media only screen and (max-width: 540px) {
+    .main {
+        margin: 0;
+    }
+    .container {
+        padding: 0;
+    }
+    .wrapper {
+        border-radius: 0;
+        padding: 0;
+    }
+    .banner__image {
+        border-radius: 0;
+    }
+    .banner__title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .banner__description {
+        text-align: center;
+    }
+    .titles {
+        text-align: center;
+    }
+    .nutrition__description {
+        text-align: center;
+    }
+}
